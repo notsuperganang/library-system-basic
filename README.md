@@ -9,28 +9,19 @@ This repository contains a basic implementation of a library system in Java. The
 To use this library system, follow these steps:
 
 1. **Clone the Repository:**
-<<<<<<< HEAD
-=======
 
->>>>>>> 37abf11 (memperindah readme agar lebih informatif)
    ```
    git clone https://github.com/your-username/library-system-basic.git
    ```
 
 2. **Navigate to the Project Directory:**
-<<<<<<< HEAD
-=======
 
->>>>>>> 37abf11 (memperindah readme agar lebih informatif)
    ```
    cd library-system-basic
    ```
 
 3. **Compile and Run:**
-<<<<<<< HEAD
-=======
 
->>>>>>> 37abf11 (memperindah readme agar lebih informatif)
    - Compile the Java files:
      ```
      javac Main.java
@@ -42,21 +33,13 @@ To use this library system, follow these steps:
 
 4. **Interact with the Library System:**
    - Follow the on-screen menu to add books, borrow books, display all books, and exit the system.
-<<<<<<< HEAD
-  
-**Contributors:**
-   - Ganang Setyo Hadi (2208107010052)
-   - Muhammad Khalid Al-Ghifari (2208107010044)
-=======
 
 **Contributors:**
 
 - Ganang Setyo Hadi (2208107010052)
 - Muhammad Khalid Al-Ghifari (2208107010044)
->>>>>>> 37abf11 (memperindah readme agar lebih informatif)
 
 **License:**
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. The MIT License is a permissive open-source license that allows for the use, modification, and distribution of the code with very few restrictions. See the [LICENSE](LICENSE) file for the full license text.
 
 Feel free to use and modify this code for your educational and personal projects. If you have any questions or suggestions, please create an issue or submit a pull request.
