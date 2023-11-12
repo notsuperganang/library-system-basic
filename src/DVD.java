@@ -11,12 +11,13 @@ class DVD extends Item {
     @Override
     public void displayInfo() {
         String status = isAvailable() ? "Available for borrowing" : "Not available for borrowing";
-        System.out.println("\n==============================================");
+        System.out.println("\n===========================================================");
         System.out.println("DVD          : " + getTitle());
         System.out.println("Directed by  : " + director);
         System.out.println("Year         : " + getYear());
         System.out.println("Duration     : " + duration);
         System.out.println("Status       : " + status);
-        System.out.println("==============================================");
+        System.out.println("===========================================================");
+
     }
 }

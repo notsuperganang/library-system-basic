@@ -11,12 +11,12 @@ class Book extends Item {
     @Override
     public void displayInfo() {
         String status = isAvailable() ? "Available for borrowing" : "Not available for borrowing";
-        System.out.println("\n==============================================");
-        System.out.println("Book        : " + getTitle());
-        System.out.println("Author      : " + author);
-        System.out.println("Year        : " + getYear());
-        System.out.println("Pages       : " + pages);
-        System.out.println("Status      : " + status);
-        System.out.println("==============================================");
+        System.out.println("\n===========================================================");
+        System.out.println("Book         : " + getTitle());
+        System.out.println("Author       : " + author);
+        System.out.println("Year         : " + getYear());
+        System.out.println("Pages        : " + pages);
+        System.out.println("Status       : " + status);
+        System.out.println("===========================================================");
     }
 }
