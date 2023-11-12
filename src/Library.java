@@ -30,4 +30,14 @@ class Library {
             item.displayInfo();
         }
     }
+
+    public void displayAllItemsOfType(Class<? extends Item> itemType) {
+        for (Item item : items) {
+            // Memeriksa apakah objek bertipe itemType
+            if (itemType.isInstance(item)) {
+                item.displayInfo();
+            }
+        }
+    }
+
 }
