@@ -40,6 +40,7 @@ To use this library system, follow these steps:
 - Muhammad Khalid Al-Ghifari (2208107010044)
 
 **License:**
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. The MIT License is a permissive open-source license that allows for the use, modification, and distribution of the code with very few restrictions. See the [LICENSE](LICENSE) file for the full license text.
 
 Feel free to use and modify this code for your educational and personal projects. If you have any questions or suggestions, please create an issue or submit a pull request.
