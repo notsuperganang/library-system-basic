@@ -33,7 +33,7 @@ To use this library system, follow these steps:
   
 **Contributors:**
    - Ganang Setyo Hadi (2208107010052)
-   - Muhammad Khalid Al-Ghifari (2208107010055)
+   - Muhammad Khalid Al-Ghifari (2208107010044)
 
 **License:**
 
