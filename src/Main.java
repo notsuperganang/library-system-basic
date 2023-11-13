@@ -8,9 +8,29 @@ public class Main {
                 System.out.print(prompt);
                 return Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("================================================");
-                System.out.println("|  Invalid input. Please enter a valid number. |");
-                System.out.println("================================================");
+                System.out.println("|\t================================================");
+                System.out.println("|\t|  Invalid input. Please enter a valid number. |");
+                System.out.println("|\t================================================");
+            }
+        }
+    }
+
+    private static int getValidYear(Scanner scanner, String prompt) {
+        while (true) {
+            try {
+                System.out.print(prompt);
+                int Year = Integer.parseInt(scanner.nextLine());
+                if (Year <= 2023 && Year >= 1) {
+                    return Year;
+                } else {
+                    System.out.println("|\t================================================");
+                    System.out.println("|\t|the year cannot exceed 2023 and be less than 1|");
+                    System.out.println("|\t================================================");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("|\t================================================");
+                System.out.println("|\t|  Invalid input. Please enter a valid number. |");
+                System.out.println("|\t================================================");
             }
         }
     }
@@ -23,9 +43,9 @@ public class Main {
             if (!input.isBlank()) {
                 return input;
             } else {
-                System.out.println("=================================================");
-                System.out.println("|Invalid input. Please enter a non-empty string.|");
-                System.out.println("=================================================");
+                System.out.println("|\t=================================================");
+                System.out.println("|\t|Invalid input. Please enter a non-empty string.|");
+                System.out.println("|\t=================================================");
             }
         }
     }
@@ -44,9 +64,9 @@ public class Main {
                     System.out.println("-----------------------------------------------------------");
                 }
             } else {
-                System.out.println("=================================================");
-                System.out.println("|Invalid input. Please enter a non-empty string.|");
-                System.out.println("=================================================");
+                System.out.println("|\t=================================================");
+                System.out.println("|\t|Invalid input. Please enter a non-empty string.|");
+                System.out.println("|\t=================================================");
             }
         }
     }
@@ -54,6 +74,18 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
         Scanner scanner = new Scanner(System.in);
+        Book book1 = new Book("The Great Gatsby", 1925, "F. Scott Fitzgerald", 180);
+        Book book2 = new Book("To Kill a Mockingbird", 1960, "Harper Lee", 281);
+        Book book3 = new Book("1984", 1949, "George Orwell", 328);
+
+        DVD dvd1 = new DVD("Inception", 2010, "Christopher Nolan", 148);
+        DVD dvd2 = new DVD("The Matrix", 1999, "Lana Wachowski", 136);
+
+        library.additempreset(dvd1);
+        library.additempreset(dvd2);
+        library.additempreset(book1);
+        library.additempreset(book2);
+        library.additempreset(book3);
 
         System.out.println("\n<================ Welcome to the Library! ================> ");
 
@@ -69,7 +101,7 @@ public class Main {
             System.out.println("5. Display All Books");
             System.out.println("6. Display All DVD");
             System.out.println("7. Display All Items");
-            System.out.println("0. Exit");
+            System.out.println("0. Exit\n");
             choice = getValidNumberInput(scanner, "Enter your choice: ");
 
             switch (choice) {
@@ -77,7 +109,7 @@ public class Main {
                     System.out.println("\n                      Adding Book!");
                     System.out.println("-----------------------------------------------------------");
                     String title = getNonExistingTitleInput(scanner, library, "| Enter book title       : ");
-                    int year = getValidNumberInput(scanner, "| Enter book year        : ");
+                    int year = getValidYear(scanner, "| Enter book year        : ");
                     String author = getValidStringInput(scanner, "| Enter book author      : ");
                     int pages = getValidNumberInput(scanner, "| Enter book Pages       : ");
                     System.out.println("-----------------------------------------------------------");
@@ -96,7 +128,7 @@ public class Main {
                     System.out.println("\n                        Adding DVD!");
                     System.out.println("-----------------------------------------------------------");
                     String dvdTitle = getNonExistingTitleInput(scanner, library, "| Enter DVD title         : ");
-                    int dvdYear = getValidNumberInput(scanner, "| Enter DVD year          : ");
+                    int dvdYear = getValidYear(scanner, "| Enter DVD year          : ");
                     String dvdDirector = getValidStringInput(scanner, "| Enter DVD director      : ");
                     int dvdDur = getValidNumberInput(scanner, "| Enter DVD duration      : ");
                     System.out.println("-----------------------------------------------------------");
@@ -128,9 +160,9 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("=================================================");
-                    System.out.println("|  Invalid choice. Please enter a valid option. |");
-                    System.out.println("=================================================");
+                    System.out.println("|\t=================================================");
+                    System.out.println("|\t|  Invalid choice. Please enter a valid option. |");
+                    System.out.println("|\t=================================================");
             }
 
         } while (choice != 0);

@@ -8,6 +8,10 @@ class Library {
         this.items = new ArrayList<>();
     }
 
+    public void additempreset(Item item) {
+        items.add(item);
+    }
+
     public void addItem(Item item) {
         String title = item.getTitle();
 
@@ -34,6 +38,24 @@ class Library {
     }
 
     public void borrowItem(String title) {
+        // Cek apakah judul sudah ada dalam daftar item
+        boolean titleExists = false;
+        for (Item item : items) {
+            if (item.getTitle().equals(title)) {
+                titleExists = true;
+                break;
+            }
+        }
+
+        if (!titleExists) {
+            System.out.println("\n-----------------------------------------------------------");
+            System.out.println("       Sorry, " + title + " is not in the library's catalog.");
+            System.out.println("   To view the library catalog, please select option 7!.");
+            System.out.println("-----------------------------------------------------------");
+            return;
+        }
+
+        // Iterasi untuk meminjam item
         for (Item item : items) {
             if (item.getTitle().equals(title) && item.isAvailable()) {
                 item.setAvailable(false);
@@ -43,6 +65,8 @@ class Library {
                 return;
             }
         }
+
+        // Jika judul ada tetapi tidak tersedia
         System.out.println("\n-----------------------------------------------------------");
         System.out.println("    Sorry, " + title + " is not available for borrowing.");
         System.out.println("-----------------------------------------------------------");
@@ -55,7 +79,7 @@ class Library {
             }
         } else {
             System.out.println("\n-----------------------------------------------------------");
-            System.out.println("        No items of type DVD have been added yet!");
+            System.out.println("              No items have been added yet!");
             System.out.println("-----------------------------------------------------------");
         }
     }
