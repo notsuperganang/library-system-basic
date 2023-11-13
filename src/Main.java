@@ -53,14 +53,16 @@ public class Main {
     private static String getNonExistingTitleInput(Scanner scanner, Library library, String prompt) {
         while (true) {
             System.out.print(prompt);
-            String title = scanner.nextLine().trim().toLowerCase();
+            String title = scanner.nextLine().trim();
+            String temp = title;
+            title.toLowerCase();
 
             if (!title.isBlank()) {
                 if (!library.isTitleExists(title)) {
                     return title;
                 } else {
                     System.out.println("-----------------------------------------------------------");
-                    System.out.println("  A book with the title " + title + " already exists");
+                    System.out.println("  A book with the title " + temp + " already exists");
                     System.out.println("-----------------------------------------------------------");
                 }
             } else {
